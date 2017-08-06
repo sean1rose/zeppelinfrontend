@@ -5,7 +5,6 @@ import axios from 'axios';
 const title = 'zeppelinfrontend';
 
 const apiUrl = process.env.API_URL;
-// console.log('here - ', apiUrl);
 
 axios.get(apiUrl + '/lists')
   .then((res) => {
