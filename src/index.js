@@ -1,15 +1,16 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import axios from 'axios';
 
 const title = 'zeppelinfrontend';
 
 const apiUrl = process.env.API_URL;
-console.log('here - ', apiUrl);
+// console.log('here - ', apiUrl);
 
-// axios({
-//   method: 'get',
-//   url: 'http://local'
-// })
+axios.get(apiUrl + '/lists')
+  .then((res) => {
+    console.log('GET REQUEST RESPONSE -> ', res);
+  });
 
 ReactDOM.render(
   <div>{title}</div>,
